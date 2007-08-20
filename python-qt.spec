@@ -1,7 +1,7 @@
 Name: python-qt
-Summary: Riverbanks's python sip
+Summary: PyQt is a set of Python bindings for Trolltech's Qt application framework
 Version: 3.17.3
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 Group: Development/KDE and Qt
 URL: http://www.riverbankcomputing.co.uk/pyqt/index.php
@@ -12,11 +12,12 @@ Provides: PyQt = %epoch:%version-%release
 Requires: python-sip >= 1:4.7
 BuildRoot: %_tmppath/%name-%version-%release-root
 BuildRequires: qt3-devel 
-BuildRequires: qscintilla-devel >= 1.7
 BuildRequires: python-sip >= 1:4.7
 %py_requires -d
 
 %description
+PyQt is a set of Python bindings for Trolltech's Qt application framework and runs on all platforms
+supported by Qt including Windows, MacOS/X and Linux.
 
 %files 
 %defattr(-,root,root)
