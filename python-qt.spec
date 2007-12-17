@@ -10,7 +10,6 @@ Patch0: PyQt-x11-gpl-3.17.3-mandriva-multiarch.patch
 License: GPL
 Provides: PyQt = %epoch:%version-%release
 Requires: python-sip >= 1:4.7
-BuildRoot: %_tmppath/%name-%version-%release-root
 BuildRequires: qt3-devel 
 BuildRequires: python-sip >= 1:4.7
 %py_requires -d
