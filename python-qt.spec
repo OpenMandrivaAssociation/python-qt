@@ -16,8 +16,8 @@ BuildRequires: python-sip >= 1:4.7
 %py_requires -d
 
 %description
-PyQt is a set of Python bindings for Trolltech's Qt application framework and runs on all platforms
-supported by Qt including Windows, MacOS/X and Linux.
+PyQt is a set of Python bindings for Trolltech's Qt application framework and
+runs on all platforms supported by Qt including Windows, MacOS/X and Linux.
 
 %files 
 %defattr(-,root,root)
