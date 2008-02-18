@@ -1,5 +1,5 @@
 Name: python-qt
-Summary: PyQt is a set of Python bindings for Trolltech's Qt application framework
+Summary: Set of Python bindings for Trolltech's Qt application framework
 Version: 3.17.3
 Release: %mkrel 3
 Epoch: 1
