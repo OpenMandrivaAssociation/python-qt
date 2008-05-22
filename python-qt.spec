@@ -1,13 +1,13 @@
 Name: python-qt
 Summary: Set of Python bindings for Trolltech's Qt application framework
-Version: 3.17.3
-Release: %mkrel 4
+Version: 3.17.4
+Release: %mkrel 1
 Epoch: 1
 Group: Development/KDE and Qt
 URL: http://www.riverbankcomputing.co.uk/pyqt/index.php
 Source0: http://www.riverbankcomputing.com/Downloads/PyQt3/GPL/PyQt-x11-gpl-%{version}.tar.gz
 Patch0: PyQt-x11-gpl-3.17.3-mandriva-multiarch.patch
-License: GPL
+License: GPLv2+
 Provides: PyQt = %epoch:%version-%release
 Requires: python-sip >= 1:4.7
 BuildRoot: %_tmppath/%name-%version-%release-root
