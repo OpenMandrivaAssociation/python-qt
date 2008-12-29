@@ -34,9 +34,9 @@ runs on all platforms supported by Qt including Windows, MacOS/X and Linux.
 %patch0 -p1
 
 %build
-export QTDIR=%qt3dir
+export QTDIR=%qt3dir 
 echo "yes" | python ./configure.py \
-    -y qt-mt
+    -y qt-mt LIBDIR_QT=%{_libdir}
 
 %make
 
