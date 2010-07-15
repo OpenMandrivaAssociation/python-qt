@@ -1,7 +1,7 @@
 Name: python-qt
 Summary: Set of Python bindings for Trolltech's Qt application framework
 Version: 3.18.1
-Release: %mkrel 4
+Release: %mkrel 5
 Epoch: 1
 Group: Development/KDE and Qt
 URL: http://www.riverbankcomputing.co.uk/pyqt/index.php
@@ -34,9 +34,16 @@ runs on all platforms supported by Qt including Windows, MacOS/X and Linux.
 %patch0 -p1
 
 %build
-export QTDIR=%qt3dir 
+export QTDIR=%qt3dir
 echo "yes" | python ./configure.py \
     -y qt-mt LIBDIR_QT=%{_libdir}
+
+for name in pylupdate3 pyuic3 qt qtcanvas qtgl qtnetwork qtsql qttable qtui qtxml; do
+	sed -i "s#^LIBS = #LIBS = $(python-config --libs) #g" ${name}/Makefile
+	sed -i "s#^CFLAGS = #CFLAGS = %{optflags} #g" ${name}/Makefile
+	sed -i "s#^CXXFLAGS = #CXXFLAGS = %{optflags} #g" ${name}/Makefile
+	sed -i "s#^LFLAGS = #LFLAGS = %{ldflags} #g" ${name}/Makefile
+done
 
 %make
 
