@@ -1,7 +1,7 @@
 Name: python-qt
 Summary: Set of Python bindings for Trolltech's Qt application framework
 Version: 3.18.1
-Release: %mkrel 6
+Release: %mkrel 7
 Epoch: 1
 Group: Development/KDE and Qt
 URL: http://www.riverbankcomputing.co.uk/software/pyqt/intro
