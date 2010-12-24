@@ -1,7 +1,7 @@
 Name: python-qt
 Summary: Set of Python bindings for Trolltech's Qt application framework
 Version: 3.18.1
-Release: %mkrel 7
+Release: %mkrel 8
 Epoch: 1
 Group: Development/KDE and Qt
 URL: http://www.riverbankcomputing.co.uk/software/pyqt/intro
@@ -13,7 +13,7 @@ Requires: python-sip >= 1:4.7
 BuildRoot: %_tmppath/%name-%version-%release-root
 BuildRequires: qt3-devel 
 BuildRequires: python-sip >= 1:4.7
-%py_requires -d
+BuildRequires: python-devel
 
 %description
 PyQt is a set of Python bindings for Trolltech's Qt application framework and
