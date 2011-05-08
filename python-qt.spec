@@ -11,7 +11,8 @@ License: GPLv2+
 Provides: PyQt = %epoch:%version-%release
 Requires: python-sip >= 1:4.7
 BuildRoot: %_tmppath/%name-%version-%release-root
-BuildRequires: qt3-devel 
+BuildRequires: qt3-devel
+BuildRequires: mesaglu-devel
 BuildRequires: python-sip >= 1:4.7
 BuildRequires: python-devel
 
