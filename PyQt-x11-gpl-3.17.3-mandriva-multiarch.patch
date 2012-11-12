@@ -1,0 +1,41 @@
+--- PyQt-x11-gpl-3.17.3/configure.py.orig	2007-05-24 18:13:48.000000000 -0300
++++ PyQt-x11-gpl-3.17.3/configure.py	2007-05-24 18:14:50.000000000 -0300
+@@ -1112,37 +1112,7 @@
+ 
+     # Try and work out which edition it is.
+     global qt_edition
+-
+-    if qt_version >= 0x030000:
+-        if opt_qconfigdir:
+-            qconfigdir = opt_qconfigdir
+-        else:
+-            qconfigdir = qt_incdir
+-
+-        qconfig = os.path.join(qconfigdir, "qconfig.h")
+-
+-        if not os.access(qconfig,os.F_OK):
+-            sipconfig.error("qconfig.h could not be found in %s." % qconfigdir)
+-
+-        f = open(qconfig)
+-        l = f.readline()
+-
+-        while l:
+-            wl = string.split(l)
+-            if len(wl) == 3 and wl[0] == "#define" and wl[1] == "QT_PRODUCT_LICENSE":
+-                    qt_edition = wl[2][4:-1]
+-                    break
+-
+-            l = f.readline()
+-
+-        f.close()
+-
+-        if not qt_edition:
+-            sipconfig.error("The Qt edition could not be determined by parsing %s." % qconfig)
+-    elif qt_version == 0x020300 and sys.platform == "win32":
+-        # See if we have the Qt v2 non-commercial version.
+-        if os.access(os.path.join(qt_libdir, "qt-mt230nc.lib"), os.F_OK):
+-            qt_edition = "non-commercial"
++    qt_edition="free"
+ 
+     if sys.platform == "win32":
+         # Work out how Qt was built on Windows.
