@@ -41,8 +41,8 @@ echo "yes" | python ./configure.py \
 
 for name in pylupdate3 pyuic3 qt qtcanvas qtgl qtnetwork qtsql qttable qtui qtxml; do
 	sed -i "s#^LIBS = #LIBS = $(python-config --libs) #g" ${name}/Makefile
-	sed -i "s#^CFLAGS = #CFLAGS = %{optflags} #g" ${name}/Makefile
-	sed -i "s#^CXXFLAGS = #CXXFLAGS = %{optflags} #g" ${name}/Makefile
+	sed -i "s#^CFLAGS = #CFLAGS = -DANY=void %{optflags} #g" ${name}/Makefile
+	sed -i "s#^CXXFLAGS = #CXXFLAGS = -DANY=void %{optflags} #g" ${name}/Makefile
 	sed -i "s#^LFLAGS = #LFLAGS = %{ldflags} #g" ${name}/Makefile
 done
 
