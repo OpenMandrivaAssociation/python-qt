@@ -1,17 +1,17 @@
-Name:		python-qt
 Summary:	Set of Python bindings for Trolltech's Qt application framework
+Name:		python-qt
+Epoch:		1
 Version:	3.18.1
 Release:	11
-Epoch:		1
 Group:		Development/KDE and Qt
 License:	GPLv2+
-URL:		http://www.riverbankcomputing.co.uk/software/pyqt/intro
+Url:		http://www.riverbankcomputing.co.uk/software/pyqt/intro
 Source0:	http://www.riverbankcomputing.com/Downloads/PyQt3/GPL/PyQt-x11-gpl-%{version}.tar.gz
 Patch0:		PyQt-x11-gpl-3.17.3-mandriva-multiarch.patch
-BuildRequires:	qt3-devel
-BuildRequires:	pkgconfig(glu)
 BuildRequires:	python-sip >= 1:4.7
-BuildRequires:	python-devel
+BuildRequires:	pkgconfig(glu)
+BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(qt-mt)
 Requires:	python-sip >= 1:4.7
 Provides:	PyQt = %{EVRD}
 
@@ -29,8 +29,8 @@ runs on all platforms supported by Qt including Windows, MacOS/X and Linux.
 #------------------------------------------------------------
 
 %prep
-%setup -q -n PyQt-x11-gpl-%{version}
-%patch0 -p1
+%setup -qn PyQt-x11-gpl-%{version}
+%apply_patches
 
 %build
 export QTDIR=%{qt3dir}
