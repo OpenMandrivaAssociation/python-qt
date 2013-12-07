@@ -2,7 +2,7 @@ Summary:	Set of Python bindings for Trolltech's Qt application framework
 Name:		python-qt
 Epoch:		1
 Version:	3.18.1
-Release:	14
+Release:	15
 Group:		Development/KDE and Qt
 License:	GPLv2+
 Url:		http://www.riverbankcomputing.co.uk/software/pyqt/intro
