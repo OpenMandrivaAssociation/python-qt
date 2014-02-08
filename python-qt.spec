@@ -1,7 +1,7 @@
 Name:		python-qt
 Summary:	Set of Python bindings for Trolltech's Qt application framework
 Version:	3.18.1
-Release:	11
+Release:	12
 Epoch:		1
 Group:		Development/KDE and Qt
 License:	GPLv2+
