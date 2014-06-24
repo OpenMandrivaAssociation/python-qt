@@ -1,7 +1,7 @@
 Summary:	Set of Python bindings for Trolltech's Qt application framework
 Name:		python-qt
 Version:	3.18.1
-Release:	16
+Release:	17
 Epoch:		1
 License:	GPLv2+
 Group:		Development/KDE and Qt
@@ -13,7 +13,7 @@ BuildRequires:	python-sip
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(qt-mt)
-Requires:	python-sip
+Requires:	sip-api(%{sip_api_major}) = %{sip_api}
 Provides:	PyQt = %{EVRD}
 
 %description
