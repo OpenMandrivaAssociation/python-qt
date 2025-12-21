@@ -9,6 +9,7 @@ Url:		https://www.riverbankcomputing.co.uk/software/pyqt/intro
 Source0:	http://www.riverbankcomputing.com/Downloads/PyQt3/GPL/PyQt-x11-gpl-%{version}.tar.gz
 Patch0:		PyQt-x11-gpl-3.17.3-mandriva-multiarch.patch
 Patch1:		PyQt-x11-gpl-3.18.1-sip415.patch
+BuildRequires:	make
 BuildRequires:	python-sip
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(python)
